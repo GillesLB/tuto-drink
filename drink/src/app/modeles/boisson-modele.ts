@@ -1,16 +1,19 @@
 export interface IBoisson {
+    boissonId: number;
     nom: string;
     couleur: string;
-    alcoolise: boolean;
+    alcoolisee: boolean;
     titre?: number;
 }
 
 export class Boisson implements IBoisson {
 
     constructor(
+        public boissonId: number,
         public nom: string,
         public couleur: string,
-        public alcoolise: boolean,
+        public alcoolisee: boolean,
         public titre?: number,
     ) {}
+
 }
