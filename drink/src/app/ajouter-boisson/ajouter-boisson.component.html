@@ -1,0 +1,76 @@
+<div class="container border-secondary mt-5">
+    <form [formGroup]="ajouterBoissonForm" (ngSubmit)="ajouterBoisson()">
+  
+      <h2>Ajouter une boisson : </h2>
+      <div class="form-group col-5">
+        <label for="nom">Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          name="nom"
+          id="nom"
+          formControlName="nom"      
+        >
+      </div>
+  
+      <div class="form-group col-5">
+        <label for="couleur">Couleur</label>
+        <input
+          type="text"
+          class="form-control"
+          name="couleur"
+          id="couleur"
+          formControlName="couleur"      
+        >
+      </div>
+  
+      <div class="form-group">
+        <div class="custom-control custom-radio">
+          <input
+            type="radio"
+            id="sans"
+            value="false"
+            name="alcoolisee"
+            class="custom-control-input"
+            (click)="sansAlcool()"
+            (change)="radioChange($event)"
+            checked
+          >
+          <label class="custom-control-label" for="sans">Sans alcool</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input
+            type="radio"
+            id="avec"
+            value="true"
+            name="alcoolisee"
+            class="custom-control-input"
+            (click)="avecAlcool()"
+            (change)="radioChange($event)"
+          >
+          <label class="custom-control-label" for="avec">Avec alcool</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label for="titre">Degré d'alcool</label>
+          <input
+            type="number"
+            class="form-control col-1"
+            name="titre"
+            id="titre"
+            formControlName="titre"      
+          >
+        </div>
+  
+      <button
+        class="btn btn-danger"
+        type="submit"
+        name="ajouter-livre"
+        [disabled]="ajouterBoissonForm.invalid"
+      >
+        Ajouter
+      </button>
+  
+    </form>
+  </div>

@@ -15,15 +15,13 @@ export class BoissonsService {
   }
 
   delete(id) {
-    console.log('!! ! ', id);
     const boissonASupprimer = this.listeBoissons.findIndex(
       (aSupprimer) => {
-        if (aSupprimer === id) {
+        if (aSupprimer === listeBoissons[id]) {
           return true;
         }
       }
     );
-    console.log('!! ! ', boissonASupprimer);
     this.listeBoissons.splice(boissonASupprimer, 1);
   }
 

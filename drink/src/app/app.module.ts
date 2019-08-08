@@ -10,6 +10,7 @@ import { DetailComponent } from './boissons/detail/detail.component';
 import { PointVenteComponent } from './point-vente/point-vente.component';
 import { HeaderComponent } from './header/header.component';
 import { BoissonsService } from 'src/app/services/boissons.service';
+import { AjouterBoissonComponent } from './ajouter-boisson/ajouter-boisson.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BoissonsService } from 'src/app/services/boissons.service';
     BoissonsComponent,
     DetailComponent,
     PointVenteComponent,
-    HeaderComponent
+    HeaderComponent,
+    AjouterBoissonComponent
   ],
   imports: [
     BrowserModule,
